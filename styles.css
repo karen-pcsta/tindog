@@ -55,11 +55,6 @@ header {
     
 }
 
-/* @media (min-width:500px) {
-    .user-picture {
-        height: 650px;
-} } */
-
 .user-picture {
     display: flex;
     flex-direction: column;
