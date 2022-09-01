@@ -45,13 +45,20 @@ header {
 
 .user-picture {
     width: 100%;
-    height: 480px;
+    height: 77vh;
+    max-width: 500px;
+    margin: 0 auto;
     border-radius: 15px;
     background-image: url(./images/dog-teddy.jpg) ;
     background-position: center center;
     background-size: cover;
     
 }
+
+/* @media (min-width:500px) {
+    .user-picture {
+        height: 650px;
+} } */
 
 .user-picture {
     display: flex;
@@ -71,14 +78,17 @@ header {
 
 .nav-container  {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
 .profile-icon,
-.chat-icon,
+.chat-icon {
+    width: 2em;
+}
+
 .logo-icon {
-    max-width: 50%;
+    width: 5em;
 }
 
 /* =======Main========== */
