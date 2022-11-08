@@ -24,35 +24,38 @@
       </header>
 
       <main>
-        <div class="user-container">
-          <div class="user-picture">
-            <div class="user-name-and-age">
+        <div class="user-container" id="userContainer">
+          <!-- <div class="user-picture">
+            <img src="./images/dog-teddy.jpg" alt="image of a dog"
+            </div>
+          </div>
+            <div class="user-info">
               <h2 class="user-name">Teddy,</h2>
               <h2 class="user-age">30</h2>
+              <p class="user-bio">How you doing? </p>
             </div>
-            <div class="user-bio"><p>How you doing?</p></div>
             <div class="like-badge">
               <img src="./images/badge-like.png" alt="image with like written on it" />
             </div>
             <div class="nope-badge">
               <img src="./images/badge-nope.png" alt="image with nope written on it" />
             </div>
+          </div> -->
+        </div>
+        <div class="buttons-container">
+          <div class="reject">
+            <button id="rejectBtn" class="reject-button">
+              <img src="./images/icon-cross.png" alt="cross shaped reject button" />
+            </button>
           </div>
-          <div class="buttons-container">
-            <div class="reject">
-              <button id="reject-btn" class="reject-button">
-                <img src="./images/icon-cross.png" alt="cross shaped reject button" />
-              </button>
-            </div>
-            <div class="accept">
-              <button id="accept-button" class="accept-button">
-                <img src="./images/icon-heart.png" alt="heart shaped accept button" />
-              </button>
-            </div>
+          <div class="like">
+            <button id="likeBtn" class="like-button">
+              <img src="./images/icon-heart.png" alt="heart shaped accept button" />
+            </button>
           </div>
         </div>
       </main>
     </div>
-    <script src="app.js" type="module"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
