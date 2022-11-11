@@ -1,6 +1,6 @@
 import dogs from "./dogDB.js";
 import DogTemplate from "./dogTemplate.js";
-import badgesDisplay from "./utils.js";
+import { badgesDisplay, dogsNameList } from "./utils.js";
 
 const likeBtn = document.getElementById("likeBtn");
 const rejectBtn = document.getElementById("rejectBtn");
@@ -15,10 +15,6 @@ likeBtn.addEventListener("click", function () {
 rejectBtn.addEventListener("click", function () {
   currentDog.changeStatusToDislike(true);
   badgesDisplay(nopeBadge);
-});
-
-let dogsNameList = dogs.map(function (dog) {
-  return dog.name;
 });
 
 let currentDogIndex = 0;
@@ -42,4 +38,4 @@ function renderDog() {
 
 renderDog();
 
-export { currentDog, currentDogIndex, dogsNameList, getNextDog, likeBadge, nopeBadge };
+export { currentDog, currentDogIndex, getNextDog, likeBadge, nopeBadge };
