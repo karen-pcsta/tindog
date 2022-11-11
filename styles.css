@@ -84,7 +84,7 @@ header {
   flex-wrap: wrap;
   padding-bottom: 2em;
   position: absolute;
-  top: 90%;
+  top: 88%;
   left: 38%;
   transform: translate(-50%, -50%);
 }
@@ -97,19 +97,22 @@ header {
   text-align: left;
 }
 
-.like-badge,
-.nope-badge {
+#likeBadge,
+#nopeBadge {
   position: absolute;
   top: 5%;
   left: 0;
   bottom: 90%;
   transform: rotate(338deg);
-  display: none;
 }
 
-.like-badge img,
-.nope-badge img {
+#likeBadge img,
+#nopeBadge img {
   width: 150px;
+}
+
+.hide-badge {
+  display: none;
 }
 
 /* =======Buttons========== */
