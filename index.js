@@ -1,25 +1,51 @@
 import dogs from "./dogDB.js";
 import DogTemplate from "./dogTemplate.js";
 
-const userContainer = document.getElementById("userContainer");
-const btnContainer = document.getElementById("buttonsContainer");
 const likeBtn = document.getElementById("likeBtn");
+const rejectBtn = document.getElementById("rejectBtn");
+const likeBadge = document.getElementById("likeBadge");
+const nopeBadge = document.getElementById("nopeBadge");
 
-likeBtn.addEventListener("click", render);
+likeBtn.addEventListener("click", function () {
+  currentDog.changeStatusToLike(true);
+  likeBadge.classList.remove("hide-badge");
+  setTimeout(() => {
+    likeBadge.classList.add("hide-badge");
+    getNextDog();
+  }, 1000);
+});
 
-let dogsNames = dogs.map(function (dog) {
+rejectBtn.addEventListener("click", function () {
+  currentDog.changeStatusToDislike(true);
+  nopeBadge.classList.remove("hidden");
+  setTimeout(() => {
+    nopeBadge.classList.add("hidden");
+    getNextDog();
+  }, 1000);
+});
+
+let dogsNameList = dogs.map(function (dog) {
   return dog.name;
 });
 
-function changeDogProfile() {
-  let currentDog = dogsNames.shift();
-  const nextDogProfile = dogs.find((value) => value.name === currentDog);
-  return nextDogProfile ? new DogTemplate(nextDogProfile) : {};
+let currentDogIndex = 0;
+
+let currentDog = new DogTemplate(dogs[currentDogIndex]);
+
+function getNextDog() {
+  currentDogIndex++;
+  dogsNameList.shift();
+  if (dogsNameList.length >= 1) {
+    currentDog = new DogTemplate(dogs[currentDogIndex]);
+    document.getElementById("userContainer").innerHTML = currentDog.getDogProfile();
+    document.ge;
+  } else {
+    alert("no more dogs!");
+  }
 }
 
-function render() {
-  let dog = changeDogProfile();
-  document.getElementById("userContainer").innerHTML = dog.getDogProfile();
+function renderDog() {
+  document.getElementById("userContainer").innerHTML = currentDog.getDogProfile();
 }
 
-render();
+renderDog();
