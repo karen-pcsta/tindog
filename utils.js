@@ -1,4 +1,9 @@
-import { currentDog, currentDogIndex, dogsNameList, getNextDog, likeBadge, nopeBadge } from "./index.js";
+import { currentDog, currentDogIndex, getNextDog, likeBadge, nopeBadge } from "./index.js";
+import dogs from "./dogDB.js";
+
+let dogsNameList = dogs.map(function (dog) {
+  return dog.name;
+});
 
 function badgesDisplay(badge) {
   badge.classList.remove("hide-badge");
@@ -8,4 +13,4 @@ function badgesDisplay(badge) {
   }, 1000);
 }
 
-export default badgesDisplay;
+export { badgesDisplay, dogsNameList };
