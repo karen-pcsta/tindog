@@ -100,19 +100,45 @@ header {
 #likeBadge,
 #nopeBadge {
   position: absolute;
-  top: 5%;
-  left: 0;
+  top: 14%;
+  left: 35%;
   bottom: 90%;
-  transform: rotate(338deg);
+  transform: rotate(315deg);
 }
 
 #likeBadge img,
 #nopeBadge img {
-  width: 150px;
+  width: 112px;
 }
 
-.hide-badge {
+.hide-element {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: -5%;
+  bottom: 0;
+  margin: auto;
+  height: 420px;
+  width: 350px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.modal-inner {
+  position: absolute;
+  top: 40%;
+  transform: translate(0, 20%);
+}
+.modal p {
+  color: black;
+}
+
+.blur {
+  filter: blur(1rem);
 }
 
 /* =======Buttons========== */
