@@ -5,12 +5,18 @@ let dogsNameList = dogs.map(function (dog) {
   return dog.name;
 });
 
-function badgesDisplay(badge) {
-  badge.classList.remove("hide-badge");
+function changeDisplay(badge) {
+  badge.classList.remove("hide-element");
   setTimeout(() => {
-    badge.classList.add("hide-badge");
+    badge.classList.add("hide-element");
     getNextDog();
   }, 1000);
 }
 
-export { badgesDisplay, dogsNameList };
+function noMoreDogsModal() {
+  document.getElementById("modal").classList.remove("hide-element");
+  // document.querySelector(".user-picture img").classList.add("blur-image");
+  document.getElementById("userContainer").classList.add("blur");
+}
+
+export { changeDisplay, dogsNameList, noMoreDogsModal };
