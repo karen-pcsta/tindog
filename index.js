@@ -1,6 +1,6 @@
 import dogs from "./dogDB.js";
 import DogTemplate from "./dogTemplate.js";
-import { badgesDisplay, dogsNameList } from "./utils.js";
+import { changeDisplay, dogsNameList, noMoreDogsModal } from "./utils.js";
 
 const likeBtn = document.getElementById("likeBtn");
 const rejectBtn = document.getElementById("rejectBtn");
@@ -9,12 +9,12 @@ const nopeBadge = document.getElementById("nopeBadge");
 
 likeBtn.addEventListener("click", function () {
   currentDog.changeStatusToLike(true);
-  badgesDisplay(likeBadge);
+  changeDisplay(likeBadge);
 });
 
 rejectBtn.addEventListener("click", function () {
   currentDog.changeStatusToDislike(true);
-  badgesDisplay(nopeBadge);
+  changeDisplay(nopeBadge);
 });
 
 let currentDogIndex = 0;
@@ -28,7 +28,7 @@ function getNextDog() {
     currentDog = new DogTemplate(dogs[currentDogIndex]);
     document.getElementById("userContainer").innerHTML = currentDog.getDogProfile();
   } else {
-    alert("no more dogs!");
+    noMoreDogsModal();
   }
 }
 
