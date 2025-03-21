@@ -2,7 +2,7 @@
 # TinDog
 
 TinDog é uma landing page fictícia para um serviço de namoro de cães, criada para fins educacionais. O projeto utiliza HTML, CSS e JavaScript para a construção do layout.
-
+Você pode vê-lo em: https://karen-pcsta.github.io/tindog/
 
 ## Funcionalidades
 
